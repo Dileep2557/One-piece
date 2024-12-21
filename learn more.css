@@ -1,0 +1,102 @@
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    background-color:blue;
+    padding: 50px;
+    
+}
+.content{
+    color: whitesmoke;
+    font-size: 2.5rem;
+    max-width: 400px;
+    margin-bottom: 20px;
+    justify-content: left;
+}
+
+.op{
+    width: 500px;
+    margin-left: 500px;
+}
+.btn{
+    text-decoration: none;
+    padding: 10px 40px;
+    color: #a92222;
+    border-radius: 5px;
+    margin-right: 10px;
+    transition: background-color 0.3s;
+    margin-left: 150px;
+}
+.btn:hover{
+    background-color: aqua;
+}
+.characters{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+}
+.chr{
+    flex: 1;
+    padding: 20px;
+    color: black;
+    text-align: left;
+}
+.zoro{
+    background-color: rgb(21, 237, 21);
+}
+.rz{
+    width: 150px;
+    margin-left: 30%;
+    margin-bottom: 5px;
+}
+.Luffy{
+    background-color: orange;
+}
+.sanji{
+    background-color: yellow;
+}
+.characters2{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+}
+.chr2{
+    flex: 1;
+    padding: 20px;
+    color: black;
+    text-align: left;
+}
+.nami{
+    background-color: brown;
+}
+.Chopper{
+    background-color: aqua;
+}
+.Usopp{
+    background-color: bisque;
+}
+.characters3{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+}
+.chr3{
+    flex: 1;
+    padding: 20px;
+    color: black;
+    text-align: left;
+}
+.robin{
+    background-color: blueviolet;
+}
+.brook{
+    background-color: rgb(117, 115, 115);
+}
+.franky{
+    background-color: rgb(25, 134, 161);
+}
+.if{
+    width: 250px;
+    height: 300px;
+    margin-left: 20%;
+}

@@ -1,0 +1,54 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    height: 100vh;
+}
+.login{
+    width: 300px;
+    padding: 40px;
+    position: relative;
+    background: #fff;
+    text-align: center;
+    border-radius: 10px;
+}
+.login h2{
+    font-size: 30px;
+    margin-bottom: 30px;
+    color: #333;
+}
+.user{
+    position: relative;
+    margin-bottom: 30px;
+}
+.user input{
+    width: 100%;
+    padding: 10px;
+    background: #f1f1f1;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.forget{
+    margin-bottom: 30px;
+}
+.forget p{
+    font-size: 14px;
+    color: #333;
+}
+.btn{
+    width: 100%;
+    border-color: #333;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    color: #333;
+    font-size: 16px;
+}
+.not{
+    font-size: 14px;
+    color: #333;
+    margin-top: 20px;
+}
