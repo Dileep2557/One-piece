@@ -122,6 +122,11 @@ header {
 .logoimg {
     max-width: 300px;
     border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.logoimg:hover {
+    transform: scale(0.9);
 }
 
 /* Responsive styles */
