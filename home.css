@@ -123,3 +123,49 @@ header {
     max-width: 300px;
     border-radius: 5px;
 }
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+    .nav li {
+        width: 100%;
+        text-align: left;
+        margin: 10px 0;
+    }
+    .buttons {
+        margin-top: 10px;
+    }
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    .image {
+        margin-top: 20px;
+    }
+    .logoimg {
+        width: 90vw;
+        max-width: 300px;
+        height: auto;
+    }
+    .content {
+        padding: 10px;
+    }
+}
+
+/* Ensure nav and hero use flex for desktop */
+nav, .hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.hero {
+    gap: 40px;
+}
