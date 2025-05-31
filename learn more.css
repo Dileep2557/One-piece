@@ -184,8 +184,9 @@
     .chr, .chr2, .chr3 {
         width: 100%;
         max-width: 350px;
-        margin: 0 auto 24px auto;
+        margin: 16px auto 24px auto; /* Add space around the box */
         text-align: center;
+        box-sizing: border-box;
     }
     .chr h2, .chr2 h2, .chr3 h2 {
         text-align: center;
@@ -274,8 +275,9 @@
     .chr, .chr2, .chr3 {
         width: 100%;
         max-width: 350px;
-        margin: 0 auto 24px auto;
+        margin: 16px auto 24px auto; /* Add space around the box */
         text-align: center;
+        box-sizing: border-box;
     }
 }
 
@@ -291,4 +293,109 @@
 .if,
 .op {
     transition: transform 0.3s ease;
+    border-radius: 16px; /* Add rounded corners to character and main images */
+}
+
+/* Zoom in effect for character names and paragraphs */
+.chr h2,
+.chr2 h2,
+.chr3 h2 {
+    transition: color 0.3s, text-shadow 0.3s, transform 0.3s;
+    cursor: pointer;
+}
+
+.chr h2:hover,
+.chr2 h2:hover,
+.chr3 h2:hover {
+    color: #2575fc;
+    text-shadow: 0 2px 12px #2575fc33;
+    transform: scale(1.08);
+}
+
+.chr p,
+.chr2 p,
+.chr3 p {
+    transition: color 0.3s, text-shadow 0.3s, transform 0.3s;
+    cursor: pointer;
+}
+
+.chr p:hover,
+.chr2 p:hover,
+.chr3 p:hover {
+    color: #ffffff;
+    text-shadow: 0 1px 8px #00AEEF33;
+    transform: scale(1.04);
+}
+
+a.knowmore,
+a.knowmore:visited,
+a.knowmore:active,
+a.knowmore:hover,
+a.knowmore:focus {
+    text-decoration: none !important;
+    color: #fff !important;
+}
+
+/* Zoom in effect for character names and paragraphs with suited colors */
+.chr.zoro h2:hover,
+.chr.zoro p:hover {
+    color: #0a3d0a; /* Zoro: dark green */
+    text-shadow: 0 2px 12px #0a3d0a33;
+}
+.chr.Luffy h2:hover,
+.chr.Luffy p:hover {
+    color: #b34700; /* Luffy: orange */
+    text-shadow: 0 2px 12px #b3470033;
+}
+.chr.sanji h2:hover,
+.chr.sanji p:hover {
+    color: #685e1e; /* Sanji: yellow */
+    text-shadow: 0 2px 12px #bfa60033;
+}
+.chr2.nami h2:hover,
+.chr2.nami p:hover {
+    color: #78513c; /* Nami: peach/orange */
+    text-shadow: 0 2px 12px #734e3a33;
+}
+.chr2.Chopper h2:hover,
+.chr2.Chopper p:hover {
+    color: #006d6d; /* Chopper: blue */
+    text-shadow: 0 2px 12px #006d6d33;
+}
+.chr2.Usopp h2:hover,
+.chr2.Usopp p:hover {
+    color: #7a5c2e; /* Usopp: brown */
+    text-shadow: 0 2px 12px #7a5c2e33;
+}
+.chr3.robin h2:hover,
+.chr3.robin p:hover {
+    color: #36205e; /* Robin: lavender */
+    text-shadow: 0 2px 12px #b39ddb33;
+}
+.chr3.brook h2:hover,
+.chr3.brook p:hover {
+    color: #343434; /* Brook: gray */
+    text-shadow: 0 2px 12px #00000033;
+}
+.chr3.franky h2:hover,
+.chr3.franky p:hover {
+    color: #1b5860; /* Franky: cyan */
+    text-shadow: 0 2px 12px #4dd0e133;
+}
+
+.chr,
+.chr2,
+.chr3 {
+    border-radius: 18px; /* Add rounded corners to all character boxes */
+    border: 1px solid #222; /* Add thin black border */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 12px rgba(30,42,56,0.10); /* Add subtle shadow to all boxes */
+}
+
+.chr:hover,
+.chr2:hover,
+.chr3:hover {
+    transform: scale(1.04);
+    box-shadow: 0 4px 24px rgba(37, 117, 252, 0.12);
+    z-index: 2;
 }

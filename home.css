@@ -12,19 +12,46 @@ body {
 
 header {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 20px 0 0 0;
-    background-color: #1E2A38;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 40px 0 40px;
     position: relative;
 }
 
 .logo {
-    font-size: 40px;
+    font-size: 2rem;
     font-weight: bold;
-    color: #2c8cb8;
-    margin-bottom: 0;
-    margin-left: 32px;
+    color: #1e2a38;
+}
+
+.header-buttons {
+    position: absolute;
+    top: 24px;
+    right: 40px;
+}
+
+.btn {
+    text-decoration: none;
+    border: 2px solid #2575fc;   /* Add blue border */
+    padding: 10px 32px;
+    color: #fff;
+    background-color: #1e2a38;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    box-shadow: 0 2px 8px rgba(30,42,56,0.10);
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s, transform 0.2s, border 0.2s;
+    display: inline-block;
+}
+
+.btn:hover,
+.btn:focus {
+    background: #2575fc;
+    color: #fff;
+    border: 2px solid #1e2a38;  /* Invert border color on hover */
+    transform: scale(1.05);
+    outline: none;
 }
 
 .navbar {
@@ -95,14 +122,57 @@ header {
 }
 
 .content h1 {
-    font-size: 48px;
+    font-size: 3vw;
+    min-font-size: 1.5rem;
+    max-font-size: 48px;
     margin-bottom: 50px;
     color: #00AEEF;
+    word-break: break-word;
+    transition: color 0.3s, text-shadow 0.3s, transform 0.3s;
 }
 
 .content p {
-    font-size: 20px;
+    font-size: 1.3vw;
+    min-font-size: 1rem;
+    max-font-size: 20px;
     margin-bottom: 40px;
+    word-break: break-word;
+    line-height: 1.5;
+    transition: color 0.3s, text-shadow 0.3s, transform 0.3s;
+}
+
+/* Add hover effect to headings and paragraphs */
+.content h1:hover {
+    color: #2575fc;
+    text-shadow: 0 2px 12px #2575fc33;
+    transform: scale(1.05);
+}
+
+.content p:hover {
+    color: #ffffff;
+    text-shadow: 0 1px 8px #00AEEF33;
+    transform: scale(1.03);
+}
+
+/* Highlight only hovered word in paragraph */
+.content p span.word-hover {
+    transition: color 0.3s, text-shadow 0.3s;
+    cursor: pointer;
+}
+
+.content p span.word-hover:hover {
+    color: #00AEEF;
+    text-shadow: 0 1px 8px #00AEEF33;
+}
+
+.buttons2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 30px;
+    margin-bottom: 0;
+    position: relative;
 }
 
 .buttons2 a {
@@ -113,6 +183,31 @@ header {
     margin-right: 10px;
     transition: background-color 0.3s;
     margin-left: 150px;
+}
+
+.buttons2 a.learn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 40px;
+    color: #fff;
+    background-color: #1e2a38;
+    border: 2px solid #2575fc;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    box-shadow: 0 2px 8px rgba(30,42,56,0.10);
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s, border 0.2s, transform 0.2s;
+    margin: 0 auto;
+}
+
+.buttons2 a.learn:hover,
+.buttons2 a.learn:focus {
+    background: #2575fc;
+    color: #fff;
+    border: 2px solid #1e2a38;
+    transform: scale(1.05);
+    outline: none;
 }
 
 .quote-btn {
@@ -271,6 +366,18 @@ header {
         width: 90vw;
         max-width: 300px;
         height: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .content h1 {
+        font-size: 2rem;
+        margin-bottom: 18px;
+    }
+    .content p {
+        font-size: 0.98rem;
+        margin-bottom: 18px;
+        padding: 0 16px; /* Add horizontal space around the paragraph */
     }
 }
 
