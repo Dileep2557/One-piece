@@ -6,37 +6,56 @@ body{
     height: 100vh;
 }
 .login{
-    width: 300px;
-    padding: 40px;
-    position: relative;
+    width: 90vw;
+    height: auto;
+    max-width: 400px;
+    min-height: unset;
+    margin: 0 auto;
+    padding: 24px 4vw;    /* Reduced padding for less white space */
+    border-radius: 18px;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.16);
     background: #fff;
-    text-align: center;
-    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .login h2{
-    font-size: 30px;
-    margin-bottom: 30px;
+    font-size: 2.4rem;      /* Increase the size of the login title */
+    margin-bottom: 36px;
     color: #333;
+    text-align: center;
 }
 .user{
     position: relative;
     margin-bottom: 30px;
 }
 .user input{
-    width: 100%;
-    padding: 10px;
+    width: 400px;              /* Increase width for desktop */
+    padding: 10px 14px;
+    font-size: 1.25rem;
     background: #f1f1f1;
-    border: none;
+    border: 1.5px solid #ccc;    /* Add border to input boxes */
     outline: none;
-    border-radius: 5px;
+    border-radius: 7px;
     cursor: pointer;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 8px rgba(37,117,252,0.10); /* Add subtle shadow */
+}
+.user input:focus {
+    outline: 2px solid #2575fc;
+    border: 1.5px solid #2575fc;
+    box-shadow: 0 0 8px #2575fc55, 0 2px 8px rgba(37,117,252,0.10); /* Stronger shadow on focus */
+    background: #f8fbff;
 }
 .forget{
     margin-bottom: 30px;
 }
 .forget p{
     font-size: 14px;
-    color: #333;
+    color: #2575fc !important;   /* Blue color for "Forget Password?" */
+    font-weight: bold;
+    cursor: pointer;
 }
 .btn{
     width: 100%;
@@ -46,9 +65,93 @@ body{
     border-radius: 10px;
     color: #333;
     font-size: 16px;
+    background: #f1f1f1;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+.btn:hover,
+.btn:focus {
+    background: #2575fc;   /* Change to background blue color */
+    color: #fff;
+    transform: scale(1.04);
+    outline: none;
 }
 .not{
     font-size: 14px;
     color: #333;
     margin-top: 20px;
+}
+.forget,
+.not {
+    text-align: center;
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.not p {
+    color: #333;
+}
+.not p span,
+.not a {
+    color: #2575fc !important;    /* Force blue color for "Signup" */
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 600px) {
+    html, body {
+        height: 100%;
+        min-height: 100%;
+    }
+    body {
+        min-height: 100vh;
+        margin: 0;
+        padding: 0;
+        background: #1e2a38;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .login {
+        width: 95vw;
+        max-width: 95vw;
+        margin: 24px auto 0 auto;
+        padding: 20px 3vw;   /* Less padding for compact look */
+        border-radius: 14px;
+    }
+    h2 {
+        font-size: 2.2rem;
+        text-align: center;
+        margin-bottom: 28px;
+    }
+    .user input {
+        width: 99%;          /* Nearly full width on mobile */
+        padding: 16px 10px;
+        font-size: 1.15rem;
+        border-radius: 7px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+        border: 1.5px solid #ccc;    /* Ensure border on mobile too */
+        box-shadow: 0 2px 8px rgba(37,117,252,0.10); /* Add shadow on mobile too */
+    }
+    .user input:focus {
+        outline: 2px solid #2575fc;
+        border: 1.5px solid #2575fc;
+        box-shadow: 0 0 8px #2575fc55, 0 2px 8px rgba(37,117,252,0.10);
+        background: #f8fbff;
+    }
+    .btn {
+        padding: 12px 0;
+        font-size: 1rem;
+    }
+    .forget, .not {
+        text-align: center;
+        font-size: 1.05rem;
+        margin-top: 12px;
+    }
+    .forget {
+        margin-bottom: 18px;
+    }
 }

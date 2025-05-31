@@ -15,20 +15,32 @@
 }
 
 .op{
-    width: 500px;
-    margin-left: 500px;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
 }
-.btn{
-    text-decoration: none;
+.btn {
+    text-decoration: none;      /* No underline */
+    border: none;               /* Remove all borders, including bottom blue line */
     padding: 10px 40px;
-    color: #a92222;
+    color: #fff;
+    background-color: #1e2a38;
     border-radius: 5px;
     margin-right: 10px;
-    transition: background-color 0.3s;
     margin-left: 150px;
+    transition: background 0.3s, color 0.3s, transform 0.2s;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(30,42,56,0.08);
+    cursor: pointer;
 }
-.btn:hover{
-    background-color: aqua;
+
+.btn:hover,
+.btn:focus {
+    color: #fff;
+    transform: scale(1.05);
+    outline: none;
 }
 .characters{
     display: flex;
@@ -42,7 +54,7 @@
     text-align: left;
 }
 .zoro{
-    background-color: rgb(21, 237, 21);
+    background-color: #19bb4c;      /* Zoro: green */
 }
 .rz{
     width: 150px;
@@ -50,10 +62,10 @@
     margin-bottom: 5px;
 }
 .Luffy{
-    background-color: orange;
+    background-color: #ffb347;      /* Luffy: orange/yellow */
 }
 .sanji{
-    background-color: yellow;
+    background-color: #ffe066;      /* Sanji: light yellow */
 }
 .characters2{
     display: flex;
@@ -67,13 +79,13 @@
     text-align: left;
 }
 .nami{
-    background-color: brown;
+    background-color: #ffb085;      /* Nami: peach/orange */
 }
 .Chopper{
-    background-color: aqua;
+    background-color: #aeefff;      /* Chopper: light blue */
 }
 .Usopp{
-    background-color: bisque;
+    background-color: #ffe5b4;      /* Usopp: beige/yellow */
 }
 .characters3{
     display: flex;
@@ -87,16 +99,196 @@
     text-align: left;
 }
 .robin{
-    background-color: blueviolet;
+    background-color: #b39ddb;      /* Robin: lavender/purple */
 }
 .brook{
-    background-color: rgb(117, 115, 115);
+    background-color: #bdbdbd;      /* Brook: light gray */
 }
 .franky{
-    background-color: rgb(25, 134, 161);
+    background-color: #4dd0e1;      /* Franky: cyan/blue */
 }
 .if{
     width: 250px;
     height: 300px;
     margin-left: 20%;
+}
+
+/* Make all .btn buttons centered and consistent on all screen sizes */
+.chr .btn,
+.chr2 .btn,
+.chr3 .btn {
+    display: block;
+    margin: 18px auto 0 auto;
+    width: 80%;
+    max-width: 220px;
+    text-align: center;
+}
+
+/* Character name colors according to their background */
+.zoro h2    { color: #0a3d0a; }
+.Luffy h2   { color: #b34700; }
+.sanji h2   { color: #bfa600; }
+.nami h2    { color: #fffbe7; }
+.Chopper h2 { color: #006d6d; }
+.Usopp h2   { color: #7a5c2e; }
+.robin h2   { color: #f3e6ff; }
+.brook h2   { color: #fff; }
+.franky h2  { color: #e0f7fa; }
+
+/* Center character names in their boxes */
+.chr h2,
+.chr2 h2,
+.chr3 h2 {
+    text-align: center;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 900px) {
+    body {
+        padding: 0;
+        margin: 0;
+        font-size: 1rem;
+    }
+    .header {
+        flex-direction: column;
+        align-items: center;
+        padding: 16px 8px;
+        text-align: center;
+    }
+    .header .content {
+        width: 100%;
+        margin-bottom: 12px;
+    }
+    .header .one {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .op {
+        width: 90vw;
+        max-width: 320px;
+        height: auto;
+        margin: 0 auto 12px auto;
+        display: block;
+        object-fit: contain;
+    }
+    .characters, .characters2, .characters3 {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 8px;
+        gap: 24px;
+    }
+    .chr, .chr2, .chr3 {
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto 24px auto;
+        text-align: center;
+    }
+    .chr h2, .chr2 h2, .chr3 h2 {
+        text-align: center;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        font-size: 2rem;
+        margin-bottom: 16px;
+        margin-top: 8px;
+        letter-spacing: 1px;
+        font-weight: bold;
+        word-break: break-word;
+        line-height: 1.2;
+    }
+    .rz, .if {
+        width: 90vw;
+        max-width: 220px;
+        height: auto;
+        display: block;
+        margin: 0 auto 12px auto;
+        object-fit: contain;
+    }
+    .btn,
+    .chr .btn,
+    .chr2 .btn,
+    .chr3 .btn {
+        width: 100%;
+        max-width: 200px;
+        margin: 12px auto 0 auto;
+        padding: 12px 0;
+        font-size: 1.1rem;
+        display: block;
+        text-align: center;
+    }
+    .header .content h1 {
+        font-size: 2.2rem;         /* Larger main title */
+        margin-bottom: 18px;
+        color: #fff;
+        letter-spacing: 1.5px;
+        font-weight: bold;
+    }
+    h1, h2 {
+        font-size: 1.3rem;
+    }
+    p {
+        font-size: 1rem;
+    }
+    .chr h2, .chr2 h2, .chr3 h2 {
+        text-align: center;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        font-size: 2rem;
+        margin-bottom: 16px;
+        margin-top: 8px;
+        letter-spacing: 1px;
+        font-weight: bold;
+    }
+    /* Character name colors for mobile as well */
+    .zoro h2    { color: #0a3d0a; }
+    .Luffy h2   { color: #b34700; }
+    .sanji h2   { color: #bfa600; }
+    .nami h2    { color: #fffbe7; }
+    .Chopper h2 { color: #006d6d; }
+    .Usopp h2   { color: #7a5c2e; }
+    .robin h2   { color: #f3e6ff; }
+    .brook h2   { color: #fff; }
+    .franky h2  { color: #e0f7fa; }
+
+    .rz, .if {
+        width: 90vw;
+        max-width: 220px;
+        height: auto;
+        display: block;
+        margin: 0 auto 12px auto;
+        object-fit: contain;
+    }
+    .op {
+        width: 90vw;
+        max-width: 320px;
+        height: auto;
+        margin: 0 auto 12px auto;
+        display: block;
+        object-fit: contain;
+    }
+    .chr, .chr2, .chr3 {
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto 24px auto;
+        text-align: center;
+    }
+}
+
+/* Zoom in effect on character and main images */
+.rz:hover,
+.if:hover,
+.op:hover {
+    transform: scale(1.08);
+    transition: transform 0.3s ease;
+}
+
+.rz,
+.if,
+.op {
+    transition: transform 0.3s ease;
 }

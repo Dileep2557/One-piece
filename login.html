@@ -4,6 +4,16 @@
 <head>
     <title>login page</title>
     <link rel="stylesheet" href="login.css">
+    <style>
+        .not p span,
+        .not a {
+            color: #2575fc !important;
+            /* Force blue color for "Signup" */
+            font-weight: bold;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
 </head>
 
 <body>
@@ -21,7 +31,7 @@
             </div>
             <button class="btn">login</button>
             <div class="not">
-                <p>Not a Member? Signup</p>
+                <p>Not a Member? <span>Signup</span></p>
             </div>
         </form>
     </div>
